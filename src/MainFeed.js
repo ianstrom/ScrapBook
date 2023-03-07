@@ -1,17 +1,15 @@
 import React from "react";
-import Post from "./Post"
+import PostContainer from "./PostContainer";
 
 function MainFeed({following}) {
     
-    const postsToDisplay = following.map((follower) => {
-        follower.posts.map((post) => {
-            return <Post key={post.id} post={post} follower={follower} />
-        })
+    const posts = following.map((follower) => {
+            return <PostContainer key={follower.id} posts={follower.posts} user={follower} />
     })
 
     return (
         <>
-        {postsToDisplay}
+        {posts}
         </>
     )
 }

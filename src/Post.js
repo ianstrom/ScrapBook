@@ -1,11 +1,11 @@
 import React from "react";
 
-function Post({post, follower}) {
+function Post({post, user}) {
     const {likes, image, comments} = post
-    const {username} = follower 
-    
+    const {username} = user 
+
     return (
-        <div className="PostContainer">
+        <div className="PostContainer" id={post.id} >
             <div>{username}</div>
             <img src={image} />
             <div>{likes}</div>

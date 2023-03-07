@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.loginInput {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  width: 200px;
+}
+
+.loginInputs {
+  text-align: center;
+}
+
+.login-form {
+  position: relative;
+  height: 100vh;
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileContainer {
+  align-items: center;
+  margin-top: 1.25%;
+}
+
+.profileInfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profileInfo {
+  padding-left: 100px;
+  padding-top: 33px;
+  font-size: 20px;
+  font-family: source-code-pro;
+  color: white;
+}
+
+.navbar {
+  padding: 50px;
+  color: white;
+}
+
+#profileImage {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profilePosts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1.25%;
+}
+
+.profilePostImg {
+  padding: 5px;
+}
+
+.PostContainer {
+  color: white;
+}
