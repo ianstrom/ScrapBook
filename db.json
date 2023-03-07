@@ -43,6 +43,48 @@
                     "image" : "https://picsum.photos/200?random=4",
                     "caption" : "",
                     "comments" : []
+                },
+                {
+                    "id" : 3,
+                    "likes" : [],
+                    "image" : "https://picsum.photos/200?random=1",
+                    "caption" : "",
+                    "comments" : []
+                },
+                {
+                    "id" : 4,
+                    "likes" : [],
+                    "image" : "https://picsum.photos/200?random=2",
+                    "caption" : "",
+                    "comments" : []
+                },
+                {
+                    "id" : 5,
+                    "likes" : [],
+                    "image" : "https://picsum.photos/200?random=1",
+                    "caption" : "",
+                    "comments" : []
+                },
+                {
+                    "id" : 6,
+                    "likes" : [],
+                    "image" : "https://picsum.photos/200?random=2",
+                    "caption" : "",
+                    "comments" : []
+                },
+                {
+                    "id" : 7,
+                    "likes" : [],
+                    "image" : "https://picsum.photos/200?random=1",
+                    "caption" : "",
+                    "comments" : []
+                },
+                {
+                    "id" : 8,
+                    "likes" : [],
+                    "image" : "https://picsum.photos/200?random=15",
+                    "caption" : "",
+                    "comments" : []
                 }
             ],
             "following" : [1, 2],

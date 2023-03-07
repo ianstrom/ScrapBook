@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 function Profile({ user }) {
     const { username, posts, profileimg, following, followers } = user
     const [isClicked, setIsClicked] = useState(false)
-    const [idToScroll, setIdToScroll] = useState("")
+    const [elementToScroll, setElementToScroll] = useState("")
 
     function handleClick(e) {
         setIsClicked(!isClicked)
-        setIdToScroll(e.target.id)
+        setElementToScroll(e.target.id)
     }
 
     const profilePosts = posts.map((post) => {
@@ -26,7 +26,7 @@ function Profile({ user }) {
                 <div className="profileInfo">Following: {following.length}</div>
             </div>
             <div>
-            {(isClicked ? <ProfilePostContainer key={user.id} posts={posts} user={user}/> : <div className="profilePosts">{profilePosts}</div> )}
+            {(isClicked ? <ProfilePostContainer key={user.id} posts={posts} user={user} elementToScroll={elementToScroll} /> : <div className="profilePosts">{profilePosts}</div> )}
             </div>
         </div>
     )

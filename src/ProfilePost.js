@@ -10,8 +10,8 @@ function ProfilePost({ post, handleClick }) {
 
 
     return (
-            <div className="profilePostImg" onClick={onClick} >
-                <img src={image} id={post.id} />
+            <div className="profilePostImg" onClick={onClick}  >
+                <img src={image} id={post.id}/>
             </div>
     )
 }
