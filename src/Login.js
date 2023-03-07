@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Login({getCurrentUser}) {
+function Login({getCurrentUser, getAllUsers}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     
@@ -12,6 +12,7 @@ function Login({getCurrentUser}) {
         .then(users => {
             const user = users.find((user) => user.username === username && user.password === password)
             getCurrentUser(user)
+            getAllUsers(users)
         })     
     }
 

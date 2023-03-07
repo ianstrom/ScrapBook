@@ -7,7 +7,7 @@ function Post({post, user}) {
     return (
         <div className="PostContainer" id={post.id} >
             <div>{username}</div>
-            <img src={image} />
+            <img src={image} alt="post" />
             <div>{likes}</div>
             <div>{comments}</div>
         </div>

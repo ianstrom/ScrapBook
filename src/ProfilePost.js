@@ -4,14 +4,16 @@ function ProfilePost({ post, handleClick }) {
     const { image } = post
 
     const onClick = (e) => {
-        handleClick(e)
+        let newValue = e.target
+
+        handleClick(newValue)
     }
 
 
 
     return (
-            <div className="profilePostImg" onClick={onClick}  >
-                <img src={image} id={post.id}/>
+            <div className="profilePostImg" onClick={onClick}>
+                <img src={image} alt="post" />
             </div>
     )
 }
