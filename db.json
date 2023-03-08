@@ -113,7 +113,7 @@
           "id": 1,
           "likes": [],
           "image": "https://picsum.photos/200?random=5",
-          "caption": "",
+          "caption": "Hey guys",
           "comments": []
         },
         {
@@ -135,10 +135,7 @@
         4
       ],
       "username": "jack-schliewe",
-      "password": "",
-      "caption": "",
-      "image": "https://picsum.photos/200?random=6",
-      "comments": []
+      "password": ""
     },
     {
       "name": "chris chan",

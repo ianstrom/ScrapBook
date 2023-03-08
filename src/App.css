@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   background-color: #282c34;
+  display: grid;
+  grid-template-columns: 6vw 94vw;
+  grid-template-rows: 6vh 94vh;
 }
 
 .App-logo {
@@ -33,6 +36,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

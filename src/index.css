@@ -14,6 +14,13 @@ code {
     monospace;
 }
 
+.login {
+  display: flex;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  justify-content: center;
+}
+
 .loginInput {
   display: flex;
   flex-direction: column;
@@ -84,7 +91,11 @@ code {
 .PostContainer {
   color: white;
   display: grid;
-  grid-template-rows: 10% 70% 10% 10%;
+  grid-template-rows: auto auto auto auto;
+  height: auto;
+  box-shadow: 0 -1px 0 #5a5a5a;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .straightupnothin {
@@ -112,14 +123,13 @@ code {
 }
 
 .islikedimg {
-  background-color: none;
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: auto;
 }
 
 .commentButton {
-  height: 2vh;
-  width: 2vh;
+  height: 3vh;
+  width: auto;
 }
 
 .searchprofileimg {
@@ -135,7 +145,7 @@ code {
 }
 
 .postsContainer {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
   flex-direction: column;
@@ -143,6 +153,110 @@ code {
 }
 
 .mainFeedProfileImg {
-  height: 2.75vh;
+  height: 7vh;
   border-radius: 50%;
+}
+
+.postsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.profileImageAndUserName {
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  padding-left: 10vw;
+}
+
+.mainFeedPostImageContainer {
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.likeAndCommentButton {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 26.3vh;
+  gap: 1.75vw;
+  padding-top: 1.75vw;
+  padding-bottom: 1.75vw;
+}
+
+.likesCommentsCaptionAndCommentForm {
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 26.3vh;
+}
+
+.mainfeedusername {
+  font-size: 20px;
+}
+
+.mainFeedPostImage {
+  height: auto;
+  width: 52vw;
+}
+
+.captionUserName {
+  font-weight: bold;
+}
+
+.captionText {
+  display: flex;
+  overflow-wrap: anywhere;
+  width: 47.4vw;
+  flex-direction: row;
+}
+
+.captionContainer {
+  display: flex;
+  gap: 0.5vh;
+  padding-top: 0.75vh;
+}
+
+.commentsDisplayContainer {
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+}
+
+.commentsContainer {
+  display: flex;
+  gap: 0.25vh;
+  padding-top: 3px;
+  flex-direction: column;
+}
+
+.signUpContainer {
+  display: flex;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signUpInputs {
+  width: 30vw;
+}
+
+.signUpButton {
+  width: 15vw;
+}
+
+.haveAProfileButton {
+  width: 15.5vw;
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

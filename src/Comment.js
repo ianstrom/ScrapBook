@@ -9,10 +9,10 @@ function Comment({comment, myUser, onCommentDelete, user, post}) {
     }
 
     return (
-        <div>
-            <div>{username}</div>
-            <div>{text}</div>
-            {displayDelete ? <button onClick={handleDelete}>Delete</button> : null}
+        <div className="commentsDisplayContainer">
+            <div className="captionUserName">{username}</div>
+            <div className="commentText">{text}</div>
+            {displayDelete ? <button className="commentDeleteButton" onClick={handleDelete}>Delete</button> : null}
         </div>
     )
 }

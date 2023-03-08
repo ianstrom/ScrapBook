@@ -31,15 +31,17 @@ function SignUp() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <input name="name" placeholder="Enter Name"></input>
-                <input name="username" placeholder="Enter Username"></input>
-                <input name="password" placeholder="Enter Password"></input>
-                <input name="profileimg" placeholder="Profile Image"></input>
-                <input type="submit"></input>
+        <div className="signUpContainer">
+            <form className="signUpForm" onSubmit={handleSubmit}>
+                <input className="signUpInputs" name="name" placeholder="Enter Name"></input>
+                <input className="signUpInputs" name="username" placeholder="Enter Username"></input>
+                <input className="signUpInputs" name="password" placeholder="Enter Password"></input>
+                <input className="signUpInputs" name="profileimg" placeholder="Profile Image"></input>
             </form>
-            <button onClick={handleClick}>Have a profile?</button>
+            <div className="signUpButtons">
+                <button className="signUpButton"type="submit">Sign Up</button>
+                <button className="haveAProfileButton" onClick={handleClick}>Have a profile?</button>
+            </div>
         </div>
     )
 }
