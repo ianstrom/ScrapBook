@@ -116,15 +116,12 @@
       "posts": [
         {
           "id": 1,
-          "likes": [],
+          "likes": [
+            "ian_strom"
+          ],
           "image": "https://picsum.photos/200?random=5",
           "caption": "",
-          "comments": [
-            {
-              "username": "jack-schliewe",
-              "text": "wow"
-            }
-          ]
+          "comments": []
         },
         {
           "id": 2,

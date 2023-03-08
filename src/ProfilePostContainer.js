@@ -1,12 +1,12 @@
 import React from "react";
 import Post from "./Post";
 
-function ProfilePostContainer({posts, user, elementRef, onLike, onComment}) {
+function ProfilePostContainer({posts, user, elementRef, onLike, onComment, myUser}) {
 
 
     const postsToDisplay = posts.map((post) => {
         
-        return <Post key={post.id} post={post} user={user} onLike={onLike} onComment={onComment}/>
+        return <Post key={post.id} post={post} user={user} onLike={onLike} onComment={onComment} myUser={myUser}/>
     })
 
     // const postToScroll = postsToDisplay.find((post1) => post1.props.post.id.toString() === elementToScroll)

@@ -141,9 +141,9 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Login getCurrentUser={getCurrentUser} getAllUsers={getAllUsers} />} />
 
-        <Route path="/mainfeed" element={<MainFeed following={following} onLike={onLike} onComment={onComment} />} />
+        <Route path="/mainfeed" element={<MainFeed following={following} onLike={onLike} onComment={onComment} myUser={myUser}/>} />
 
-        <Route path="/profile" element={<MyProfile user={myUser} onLike={onLike} onComment={onComment}/>} />
+        <Route path="/profile" element={<MyProfile user={myUser} onLike={onLike} onComment={onComment} myUser={myUser}/>} />
 
         <Route path="/createpost" element={<CreatePost user={myUser} getCurrentUser={getCurrentUser} />} />
 

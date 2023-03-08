@@ -1,4 +1,8 @@
 import React from "react";
+import home from "./icons/home.png"
+import signout from "./icons/signout.png"
+import createpost from "./icons/createpost.png"
+import search from "./icons/search.png"
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
@@ -6,11 +10,11 @@ function NavBar() {
 
     return (
         <div>
-            <NavLink to="/mainfeed" className="navbar">Home</NavLink>
+            <NavLink to="/mainfeed" className="navbar"><img className="nav-image" src={home}/></NavLink>
             <NavLink to="/profile" className="navbar">Profile</NavLink>
-            <NavLink to="/createpost" className="navbar">CreatePost</NavLink>
-            <NavLink to="/search" className={"navbar"}>Search</NavLink>
-            <NavLink to='/' className="navbar">Sign Out</NavLink>
+            <NavLink to="/createpost" className="navbar"><img className="nav-image" src={createpost}/></NavLink>
+            <NavLink to="/search" className={"navbar"}><img className="nav-image" src={search}/></NavLink>
+            <NavLink to='/' className="navbar"><img className="nav-image" src={signout}/></NavLink>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import ProfilePost from "./ProfilePost"
 import ProfilePostContainer from "./ProfilePostContainer"
 
-function MyProfile({ user, onLike , onComment}) {
+function MyProfile({ user, onLike , onComment, myUser}) {
     const { username, posts, profileimg, following, followers } = user
     const [isClicked, setIsClicked] = useState(false)
     const elementRef = useRef(null)
@@ -28,7 +28,7 @@ function MyProfile({ user, onLike , onComment}) {
                 <div className="profileInfo">Following: {following.length}</div>
             </div>
             <div>
-            {(isClicked ? <ProfilePostContainer key={user.id} posts={posts} user={user} elementRef={elementRef} onLike={onLike} onComment={onComment}/> : <div className="profilePosts">{profilePosts}</div> )}
+            {(isClicked ? <ProfilePostContainer key={user.id} posts={posts} user={user} elementRef={elementRef} onLike={onLike} onComment={onComment} myUser={myUser}/> : <div className="profilePosts">{profilePosts}</div> )}
             </div>
         </div>
     )

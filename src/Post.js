@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Comment from "./Comment";
 
-function Post({ post, user, onLike, onComment}) {
+function Post({ post, user, onLike, onComment, myUser}) {
     const [isClicked, setIsClicked] = useState(false)
     const [commentInput, setCommentInput] = useState("")
     const { likes, image, comments } = post
@@ -15,7 +15,7 @@ function Post({ post, user, onLike, onComment}) {
         console.log(commentInput)
 
         const comment = {
-            username: user.username,
+            username: myUser.username,
             text: commentInput
         }
 
