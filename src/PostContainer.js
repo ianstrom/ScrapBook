@@ -8,9 +8,9 @@ function PostContainer({posts, user, onLike, onComment, myUser, onCommentDelete}
     })
 
     return (
-        <>
+        <div>
             {postsToDisplay}
-        </>
+        </div>
     )
 }
 

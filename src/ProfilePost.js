@@ -9,8 +9,6 @@ function ProfilePost({ post, handleClick }) {
         handleClick(post)
     }
 
-
-
     return (
         <div className="profilePostImg" onClick={onClick}>
             <img src={image} alt="post" />
