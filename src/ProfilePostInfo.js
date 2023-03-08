@@ -16,8 +16,6 @@ function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelet
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(commentInput)
-
         const comment = {
             id: Math.random(),
             posterId: user.id,

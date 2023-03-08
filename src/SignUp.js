@@ -15,7 +15,6 @@ function SignUp() {
             "username": e.target.username.value,
             "password": e.target.password.value
         }
-        console.log(newUser)
         fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {

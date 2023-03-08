@@ -16,8 +16,6 @@ function CreatePost({user, getCurrentUser}) {
             likes: [],
         }
 
-        console.log(user.posts)
-
         const allPosts = [...user.posts, newPost]
 
         fetch(`http://localhost:3000/users/${user.id}`, {

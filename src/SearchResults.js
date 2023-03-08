@@ -3,7 +3,6 @@ import React from "react";
 function SearchResults({user, onClickUser}) {
     const {profileimg, username} = user
     function handleClick() {
-        console.log(user)
         onClickUser(user)
     }
 

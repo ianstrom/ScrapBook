@@ -1,6 +1,5 @@
 import './App.css';
 import MainFeed from './MainFeed';
-// import Messaging from './Messaging';
 import MyProfile from './MyProfile';
 import CreatePost from './CreatePost';
 import Login from './Login';
@@ -44,13 +43,10 @@ function App() {
 
   function onClickUser(userToDisplay) {
     setClickedUser(userToDisplay)
-    // console.log(userToDisplay)
     const isFollowingStateValue = (userToDisplay.followers.find(id => id === myUser.id) ? true : false)
     setIsFollowing(isFollowingStateValue)
     navigate("/clickedprofile")
   }
-
-  // console.log(clickedUser)
 
   function onFollow() {
     const clickedUserFollowOrUnfollowArray = (isFollowing ? clickedUser.followers.filter((follower) => follower !== myUser.id) : [...clickedUser.followers, myUser.id])
@@ -109,7 +105,7 @@ function App() {
         fetch('http://localhost:3000/users')
           .then(data => data.json())
           .then(data => setUsers(data))
-      ) /* a way to set state to display new like on post and update entire userdata*/
+      )
   }
 
   function onComment(user, postToUpdate, comment) {

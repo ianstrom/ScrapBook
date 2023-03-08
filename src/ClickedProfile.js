@@ -3,13 +3,10 @@ import ProfilePost from "./ProfilePost"
 import ProfilePostContainer from "./ProfilePostContainer"
 
 function ClickedProfile({clickedUser, isFollowing, onFollow, onLike, onComment, myUser, onCommentDelete}) {
-    // const isFollowingStateValue = (clickedUser.followers.find((id) => id === myUser.id) ? true : false)
     const { username, posts, profileimg, following, followers } = clickedUser
     const [isClicked, setIsClicked] = useState(false)
     const [postIndex, setPostIndex] = useState(null)
     const elementRef = useRef(null)
-
-    // console.log(clickedUser)
 
     function handleClick(clickedPost) {
         setIsClicked(!isClicked)
