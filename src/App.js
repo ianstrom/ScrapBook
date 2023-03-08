@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import NavBar from './NavBar';
 import Search from './Search';
 import ClickedProfile from './ClickedProfile';
+import SignUp from './SignUp';
 
 
 
@@ -19,7 +20,6 @@ function App() {
   const [clickedUser, setClickedUser] = useState(false)
   const [following, setFollowing] = useState([])
   const [isFollowing, setIsFollowing] = useState()
-  const [isLiked, setIsLiked] = useState()
 
   const navigate = useNavigate()
 
@@ -91,8 +91,9 @@ function App() {
   }
 
   function onLike(user, postToUpdate) {
+    const alreadyLiked = postToUpdate.likes.includes(myUser.username)
     const postIndex = user.posts.findIndex((post) => post.id === postToUpdate.id)
-    const likeArray = (isLiked ? postToUpdate.likes.filter((liker) => liker !== myUser.username) : [...postToUpdate.likes, myUser.username])
+    const likeArray = (alreadyLiked ? postToUpdate.likes.filter((liker) => liker !== myUser.username) : [...postToUpdate.likes, myUser.username])
     let updatedUser = user
     updatedUser.posts[postIndex].likes = likeArray
 
@@ -106,11 +107,9 @@ function App() {
       .then(data => data.json())
       .then(
         fetch('http://localhost:3000/users')
-        .then(data => data.json())
-        .then(data => setUsers(data))
-    ) /* a way to set state to display new like on post and update entire userdata*/
-
-      setIsLiked(!isLiked)
+          .then(data => data.json())
+          .then(data => setUsers(data))
+      ) /* a way to set state to display new like on post and update entire userdata*/
   }
 
   function onComment(user, postToUpdate, comment) {
@@ -130,24 +129,59 @@ function App() {
       .then(data => data.json())
       .then(
         fetch('http://localhost:3000/users')
-        .then(data => data.json())
-        .then(data => setUsers(data))
-    )
+          .then(data => data.json())
+          .then(data => setUsers(data))
+      )
+  }
+
+  function signOut() {
+    setMyUser(false)
+    navigate('/')
+    window.location.reload()
+  }
+
+  function onCommentDelete(user, postToUpdate, deletedComment) {
+    const postIndex = user.posts.findIndex((post) => post.id === postToUpdate.id)
+    const commentArray = user.posts[postIndex].comments.filter((comment) => comment.id !== deletedComment.id)
+    let updatedUser = user
+    updatedUser.posts[postIndex].comments = commentArray
+
+    fetch(`http://localhost:3000/users/${user.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updatedUser)
+    })
+      .then(data => data.json())
+      .then(
+        fetch('http://localhost:3000/users')
+          .then(data => data.json())
+          .then(data => setUsers(data))
+      )
+  }
+
+  function signOut() {
+    setMyUser(false)
+    navigate('/')
+    window.location.reload()
   }
 
   return (
     <div className="App">
-      {(myUser ? <NavBar /> : null)}
+      {(myUser ? <NavBar myUser={myUser} signOut={signOut} /> : null)}
       <Routes>
-        <Route exact path="/" element={<Login getCurrentUser={getCurrentUser} getAllUsers={getAllUsers} />} />
+        <Route exact path="/signup" element={<SignUp />} />
 
-        <Route path="/mainfeed" element={<MainFeed following={following} onLike={onLike} onComment={onComment} myUser={myUser}/>} />
+        <Route path="/" element={<Login getCurrentUser={getCurrentUser} getAllUsers={getAllUsers} />} />
 
-        <Route path="/profile" element={<MyProfile user={myUser} onLike={onLike} onComment={onComment} myUser={myUser}/>} />
+        <Route path="/mainfeed" element={<MainFeed following={following} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete}/>} />
+
+        <Route path="/profile" element={<MyProfile user={myUser} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete}/>} />
 
         <Route path="/createpost" element={<CreatePost user={myUser} getCurrentUser={getCurrentUser} />} />
 
-        <Route path="/clickedprofile" element={<ClickedProfile isFollowing={isFollowing} clickedUser={clickedUser} myUser={myUser} onFollow={onFollow} onLike={onLike} onComment={onComment}/>} />
+        <Route path="/clickedprofile" element={<ClickedProfile isFollowing={isFollowing} clickedUser={clickedUser} myUser={myUser} onFollow={onFollow} onLike={onLike} onComment={onComment} onCommentDelete={onCommentDelete}/>} />
 
         <Route path="/search" element={<Search users={users} onClickUser={onClickUser} clickedUser={clickedUser} />} />
       </Routes>

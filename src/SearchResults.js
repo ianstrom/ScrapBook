@@ -9,7 +9,7 @@ function SearchResults({user, onClickUser}) {
 
     return (
         <div onClick={handleClick}>
-            <img src={profileimg} alt="profileimg" />
+            <img src={profileimg} alt="profileimg" className="searchprofileimg"/>
             <div>{username}</div>
         </div>
     )

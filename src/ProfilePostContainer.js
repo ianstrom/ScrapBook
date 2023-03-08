@@ -1,22 +1,26 @@
 import React from "react";
-import Post from "./Post";
+import ProfilePostInfo from "./ProfilePostInfo";
 
-function ProfilePostContainer({posts, user, elementRef, onLike, onComment, myUser}) {
+function ProfilePostContainer({ post, user, onLike, onComment, myUser, decreaseIndex, increaseIndex, goBackToProfile, onCommentDelete }) {
 
-
-    const postsToDisplay = posts.map((post) => {
-        
-        return <Post key={post.id} post={post} user={user} onLike={onLike} onComment={onComment} myUser={myUser}/>
-    })
-
-    // const postToScroll = postsToDisplay.find((post1) => post1.props.post.id.toString() === elementToScroll)
-    // const postSelector = document.getElementById(postToScroll.props.post.id)
-
-    // postSelector.focus()
+    window.addEventListener(
+        "keydown",
+        (e) => {
+            if (e.code == 'ArrowRight') {
+                increaseIndex();
+            } else if (e.code == 'ArrowLeft') {
+                decreaseIndex();
+            } else if (e.code == 'Escape') {
+                goBackToProfile();
+            } 
+        }
+    )
 
     return (
-        <div ref={elementRef.current.scrollIntoView()} >
-            {postsToDisplay}     
+        <div >
+            <button onClick={decreaseIndex}>Previous</button>
+            <ProfilePostInfo post={post} user={user} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete}/>
+            <button onClick={increaseIndex}>Next</button>
         </div>
     )
 }

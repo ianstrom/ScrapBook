@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function CreatePost({user, getCurrentUser}) {
     const [image, setImage] = useState("")
     const [caption, setCaption] = useState("")
@@ -8,6 +9,7 @@ function CreatePost({user, getCurrentUser}) {
         e.preventDefault()
 
         const newPost = {
+            id: user.posts.length + 1,
             image: image,
             caption: caption,
             comments: [],

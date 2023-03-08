@@ -27,6 +27,10 @@ function Login({getCurrentUser, getAllUsers}) {
         setPassword(e.target.value)
     }
 
+    function handleClick(){
+        navigate('/signup')
+    }
+
     return (
         <div className="login">
             <form onSubmit={handleSubmit} className="login-form">
@@ -35,6 +39,7 @@ function Login({getCurrentUser, getAllUsers}) {
                 <input className="loginInputs" type="password" placeholder="Password" value ={password} onChange={(e) => handlePasswordChange(e)}></input>
                 <button className="loginInputs" type="submit">Login</button>
                 </div>
+                <button onClick={handleClick} >New User?</button>
             </form>
         </div>
     )

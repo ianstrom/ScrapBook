@@ -41,12 +41,7 @@
           "likes": [],
           "image": "https://picsum.photos/200?random=3",
           "caption": "",
-          "comments": [
-            {
-              "username": "chris-wong",
-              "text": "asdf"
-            }
-          ]
+          "comments": []
         },
         {
           "id": 2,
@@ -116,9 +111,7 @@
       "posts": [
         {
           "id": 1,
-          "likes": [
-            "ian_strom"
-          ],
+          "likes": [],
           "image": "https://picsum.photos/200?random=5",
           "caption": "",
           "comments": []
@@ -133,17 +126,33 @@
       ],
       "following": [
         1,
-        2
+        2,
+        4
       ],
       "followers": [
         1,
-        2
+        2,
+        4
       ],
       "username": "jack-schliewe",
       "password": "",
       "caption": "",
       "image": "https://picsum.photos/200?random=6",
       "comments": []
+    },
+    {
+      "name": "chris chan",
+      "profileimg": "https://scpr.brightspotcdn.com/dims4/default/4f94506/2147483647/strip/true/crop/730x487+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fscpr-brightspot.s3.amazonaws.com%2Flegacy%2Fi%2F17db5f960cf8a4b4157dd3105b632999%2F5e6973bcb555c5000abe37b3-eight.jpg",
+      "posts": [],
+      "following": [
+        3
+      ],
+      "followers": [
+        3
+      ],
+      "username": "bum",
+      "password": "",
+      "id": 4
     }
   ]
 }

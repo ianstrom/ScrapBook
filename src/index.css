@@ -62,6 +62,7 @@ code {
 
 #profileImage {
   height: 100px;
+  width: 100px;
   border-radius: 50%;
 }
 
@@ -87,4 +88,32 @@ code {
 .nav-image {
   height: 5vh;
   width: 5vh;
+}
+
+#navbar {
+  width: 100%;
+  overflow: hidden;
+}
+
+#profile-image-link {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50px;
+}
+
+.islikedimg {
+  background-color: none;
+  height: 2vh;
+  width: 2vh;
+}
+
+.commentButton {
+  height: 2vh;
+  width: 2vh;
+}
+
+.searchprofileimg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }

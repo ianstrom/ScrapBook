@@ -4,8 +4,7 @@ import like from "./icons/like.png"
 import likeActive from "./icons/likeActive.png"
 import comment from "./icons/comment.png"
 
-
-function Post({ post, user, onLike, onComment, myUser, onCommentDelete}) {
+function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelete}){
     const [isClicked, setIsClicked] = useState(false)
     const [commentInput, setCommentInput] = useState("")
     const [alreadyLiked, setAlreadyLiked] = useState((post.likes.includes(myUser.username) ? true : false))
@@ -42,8 +41,7 @@ function Post({ post, user, onLike, onComment, myUser, onCommentDelete}) {
     const commentsToDisplay = comments.map((comment) => {
         return <Comment key={comment.text} comment={comment} myUser={myUser} onCommentDelete={onCommentDelete} user={user} post={post}/>
     })
-
-    return (
+    return(
         <div className="PostContainer" id={post.id} >
             <div>{username}</div>
             <img src={image} alt="post" />
@@ -60,4 +58,4 @@ function Post({ post, user, onLike, onComment, myUser, onCommentDelete}) {
     )
 }
 
-export default Post
+export default ProfilePostInfo
