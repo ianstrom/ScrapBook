@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login({getCurrentUser, getAllUsers}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate()
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,6 +15,7 @@ function Login({getCurrentUser, getAllUsers}) {
             const user = users.find((user) => user.username === username && user.password === password)
             getCurrentUser(user)
             getAllUsers(users)
+            navigate("/mainfeed")
         })     
     }
 

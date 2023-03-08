@@ -41,7 +41,12 @@
           "likes": [],
           "image": "https://picsum.photos/200?random=3",
           "caption": "",
-          "comments": []
+          "comments": [
+            {
+              "username": "chris-wong",
+              "text": "asdf"
+            }
+          ]
         },
         {
           "id": 2,
@@ -114,7 +119,12 @@
           "likes": [],
           "image": "https://picsum.photos/200?random=5",
           "caption": "",
-          "comments": []
+          "comments": [
+            {
+              "username": "jack-schliewe",
+              "text": "wow"
+            }
+          ]
         },
         {
           "id": 2,
@@ -133,7 +143,10 @@
         2
       ],
       "username": "jack-schliewe",
-      "password": ""
+      "password": "",
+      "caption": "",
+      "image": "https://picsum.photos/200?random=6",
+      "comments": []
     }
   ]
 }
