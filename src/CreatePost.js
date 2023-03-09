@@ -30,19 +30,21 @@ function CreatePost({ user, getCurrentUser }) {
     }
 
     return (
-        <div class="loginContainer">
+        <div className="loginContainer">
             <form className="createPostForm" onSubmit={handleSubmit}>
-                <div class="input">
-                    <input placeholder="image" value={image} onChange={(e) => setImage(e.target.value)}></input>
+                <div className="input">
+                    <input placeholder="Image" value={image} onChange={(e) => setImage(e.target.value)}></input>
+                    <label>Image</label>
                 </div>
-                <div class="input">
-                    <input placeholder="caption" value={caption} onChange={(e) => setCaption(e.target.value)}></input>
+                <div className="input">
+                    <input placeholder="Caption" value={caption} onChange={(e) => setCaption(e.target.value)}></input>
+                    <label>Caption</label>
                 </div>
                 <div className="logInButtons">
-                <button type="submit" class="box-1">
-                    <button type="submit" class="btn btn-one">
+                <button type="submit" className="box-1">
+                    <div className="btn btn-one">
                         <span>Post</span>
-                    </button>
+                    </div>
                 </button>
             </div>
             </form>

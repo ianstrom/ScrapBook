@@ -65,7 +65,6 @@ code {
   padding-left: 100px;
   padding-top: 33px;
   font-size: 20px;
-  font-family: source-code-pro;
   color: white;
 }
 
@@ -456,11 +455,6 @@ button[class*=box] {
   cursor: pointer;
 }
 
-/* 
-========================
-      BUTTON ONE
-========================
-*/
 .btn-one {
   color: #FFF;
   transition: all 0.2s;
@@ -485,9 +479,10 @@ button[class*=box] {
   border-bottom-width: 1px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-color: rgba(255, 255, 255, 0.5);
-  border-bottom-color: rgba(255, 255, 255, 0.5);
+  border-top-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
   transform: scale(0.1, 1);
+  border-radius: 10px;
 }
 
 .btn-one:hover span {
@@ -509,6 +504,7 @@ button[class*=box] {
   z-index: 1;
   transition: all 0.2s;
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 .btn-one:hover::after {
@@ -529,148 +525,64 @@ button[class*=box] {
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.loginContainer{
-	position:absolute;
-	left:50%;
-	top:50%;
-	transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.89);
-	border-radius:3px;
-	padding:70px 100px;
+.loginContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+  border-radius: 25px;
 }
-.input{
-	position:relative;
-	margin-bottom:25px;
+
+.input {
+  position: relative;
+  margin-bottom: 25px;
 }
-.input label{
-	position:absolute;
-	top:0px;
-	left:0px;
-	font-size:16px;
-	color:#fff;	
-	transition: all 0.5s ease-in-out;
+
+.input label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
 }
-.input input{ 
-  border:0;
-  border-bottom:1px solid #555;  
-  background:transparent;
-  width:100%;
-  padding:8px 0 5px 0;
-  font-size:16px;
-  color:#fff;
+
+.input input {
+  border: 0;
+  border-bottom: 1px solid #3d3d3d;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
 }
-.input input:focus{ 
- border:none;	
- outline:none;
- border-bottom:1px solid #e74c3c;	
+
+.input input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
 }
-.loginButton{
-	color:#fff;
-	background-color:#e74c3c;
-	outline: none;
-    border: 0;
-    color: #fff;
-	padding:10px 20px;
-	text-transform:uppercase;
-	margin-top:50px;
-	border-radius:2px;
-	cursor:pointer;
-	position:relative;
+
+.loginButton {
+  color: #fff;
+  background-color: #e74c3c;
+  outline: none;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
 }
-.input input:focus ~ label,
-.input input:valid ~ label{
-	top:-12px;
-	font-size:12px;
-	
+
+.input input:focus~label,
+.input input:valid~label {
+  top: -12px;
+  font-size: 12px;
+
 }

@@ -46,10 +46,10 @@ function ClickedProfile({ clickedUser, isFollowing, onFollow, onLike, onComment,
                 <div className="profileInfo">Following: {following.length}</div>
             </div>
             <div className="logInButtons">
-                <button onClick={onFollowClick} class="box-1">
-                    <button type="submit" class="btn btn-one">
+                <button onClick={onFollowClick} className="box-1">
+                    <div className="btn btn-one">
                         <span>{isFollowing ? "Unfollow" : "Follow"}</span>
-                    </button>
+                    </div>
                 </button>
             </div>
             {/* <button onClick={onFollowClick}>{isFollowing ? "Unfollow" : "Follow"}</button> */}

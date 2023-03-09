@@ -32,47 +32,36 @@ function SignUp() {
 
     return (
         <div className="signUpContainer">
-            {/* <form className="signUpForm" onSubmit={handleSubmit}>
-                <div className="signUpInput">
-                    <input className="signUpInputs" name="name" placeholder="Enter Name"></input>
-                    <input className="signUpInputs" name="username" placeholder="Enter Username"></input>
-                    <input className="signUpInputs" name="password" placeholder="Enter Password"></input>
-                    <input className="signUpInputs" name="profileimg" placeholder="Profile Image"></input>
-                    <div className="signUpButtons">
-                    <button type="submit" class="box-1">
-                            <button type="submit" class="btn btn-one">
-                                <span>Sign Up</span>
-                            </button>
-                        </button>
-                        <button type="submit" class="box-1" onClick={handleClick}>
-                            <button type="submit" class="btn btn-one">
-                                <span>Have a profile?</span>
-                            </button>
-                        </button>
-                    </div>
-                </div>
-            </form> */}
-
-            <div class="loginContainer">
+            <div className="loginContainer">
                 <form onSubmit={handleSubmit}>
-                    <div class="input" >
+                    <div className="input" >
                         <input name="name" placeholder="Enter Name"></input>
                         <label>Name</label>
                     </div>
-                    <div class="input" >
+                    <div className="input" >
                         <input name="username" placeholder="Enter Username"></input>
                         <label>Username</label>
                     </div>
-                    <div class="input" >
+                    <div className="input" >
                         <input name="password" placeholder="Enter Password"></input>
                         <label>Password</label>
                     </div>
-                    <div class="input" >
+                    <div className="input" >
                         <input name="profileimg" placeholder="Profile Image"></input>
                         <label>Password</label>
                     </div>
-                    <button className="loginButton" type="submit">Sign Up</button>
-                        <button className="loginButton" onClick={handleClick}>Have a profile?</button>
+                    <div className="signUpButtons">
+                        <button type="submit" className="box-1">
+                            <div className="btn btn-one">
+                                <span>Sign Up</span>
+                            </div>
+                        </button>
+                        <button type="submit" className="box-1" onClick={handleClick}>
+                            <div className="btn btn-one">
+                                <span>Have a profile?</span>
+                            </div>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
