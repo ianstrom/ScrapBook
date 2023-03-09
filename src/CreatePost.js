@@ -34,7 +34,13 @@ function CreatePost({user, getCurrentUser}) {
             <form className="createPostForm" onSubmit={handleSubmit}>
                 <input placeholder="image" value={image} onChange={(e) => setImage(e.target.value)}></input>
                 <input placeholder="caption" value={caption} onChange={(e) => setCaption(e.target.value)}></input>
-                <button type="submit">Post</button>
+                <div className="logInButtons">
+                <button type="submit" class="box-1">
+                    <button type="submit" class="btn btn-one">
+                        <span>Post</span>
+                    </button>
+                </button>
+            </div>
             </form>
         </div>
     )

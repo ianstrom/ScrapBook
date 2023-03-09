@@ -6,7 +6,7 @@ import comment from "./icons/comment.png"
 import MainFeed from "./MainFeed";
 
 
-function Post({ post, user, onLike, onComment, myUser, onCommentDelete }) {
+function Post({ post, user, onLike, onComment, myUser, onCommentDelete, onClickUser}) {
     const [isClicked, setIsClicked] = useState(false)
     const [commentInput, setCommentInput] = useState("")
     const [alreadyLiked, setAlreadyLiked] = useState((post.likes.includes(myUser.username) ? true : false))
@@ -39,13 +39,17 @@ function Post({ post, user, onLike, onComment, myUser, onCommentDelete }) {
         setIsClicked(!isClicked)
     }
 
+    const handleClickGoToProfile = () => {
+        onClickUser(user)
+    }
+
     const commentsToDisplay = comments.map((comment) => {
         return <Comment key={comment.text} comment={comment} myUser={myUser} onCommentDelete={onCommentDelete} user={user} post={post} />
     })
 
     return (
         <div className="PostContainer" id={post.id} >
-            <div className="profileImageAndUserName">
+            <div className="profileImageAndUserName" onClick={handleClickGoToProfile}>
                 <img src={user.profileimg} className="mainFeedProfileImg" />
                 <div className="mainfeedusername">{username}</div>
             </div>

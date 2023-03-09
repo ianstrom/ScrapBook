@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import ProfilePost from "./ProfilePost"
 import ProfilePostContainer from "./ProfilePostContainer"
 
-function ClickedProfile({clickedUser, isFollowing, onFollow, onLike, onComment, myUser, onCommentDelete}) {
+function ClickedProfile({ clickedUser, isFollowing, onFollow, onLike, onComment, myUser, onCommentDelete }) {
     const { username, posts, profileimg, following, followers } = clickedUser
     const [isClicked, setIsClicked] = useState(false)
     const [postIndex, setPostIndex] = useState(null)
@@ -45,8 +45,15 @@ function ClickedProfile({clickedUser, isFollowing, onFollow, onLike, onComment, 
                 <div className="profileInfo">Followers: {followers.length}</div>
                 <div className="profileInfo">Following: {following.length}</div>
             </div>
-            <button onClick={onFollowClick}>{isFollowing ? "Unfollow" : "Follow"}</button>
-                {(isClicked ? profilePostInfo[postIndex] : <div className="profilePosts">{profilePosts}</div>)}
+            <div className="logInButtons">
+                <button onClick={onFollowClick} class="box-1">
+                    <button type="submit" class="btn btn-one">
+                        <span>{isFollowing ? "Unfollow" : "Follow"}</span>
+                    </button>
+                </button>
+            </div>
+            {/* <button onClick={onFollowClick}>{isFollowing ? "Unfollow" : "Follow"}</button> */}
+            {(isClicked ? profilePostInfo[postIndex] : <div className="profilePosts">{profilePosts}</div>)}
         </div>
     )
 }

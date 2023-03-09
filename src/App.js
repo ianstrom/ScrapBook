@@ -175,7 +175,7 @@ function App() {
 
         <Route path="/" element={<Login getCurrentUser={getCurrentUser} getAllUsers={getAllUsers} />} />
 
-        <Route path="/mainfeed" element={<MainFeed following={following} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete}/>} />
+        <Route path="/mainfeed" element={<MainFeed following={following} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete} onClickUser={onClickUser}/>} />
 
         <Route path="/profile" element={<MyProfile user={myUser} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete}/>} />
 

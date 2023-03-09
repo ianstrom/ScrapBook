@@ -39,8 +39,16 @@ function SignUp() {
                     <input className="signUpInputs" name="password" placeholder="Enter Password"></input>
                     <input className="signUpInputs" name="profileimg" placeholder="Profile Image"></input>
                     <div className="signUpButtons">
-                        <button className="signUpButton" type="submit">Sign Up</button>
-                        <button className="signUpButton" onClick={handleClick}>Have a profile?</button>
+                    <button type="submit" class="box-1">
+                            <button type="submit" class="btn btn-one">
+                                <span>Sign Up</span>
+                            </button>
+                        </button>
+                        <button type="submit" class="box-1" onClick={handleClick}>
+                            <button type="submit" class="btn btn-one">
+                                <span>Have a profile?</span>
+                            </button>
+                        </button>
                     </div>
                 </div>
             </form>

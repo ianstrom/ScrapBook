@@ -38,8 +38,18 @@ function Login({ getCurrentUser, getAllUsers }) {
                     <input className="loginInputs" type="text" placeholder="User Name" value={username} onChange={(e) => handleUserChange(e)}></input>
                     <input className="loginInputs" type="password" placeholder="Password" value={password} onChange={(e) => handlePasswordChange(e)}></input>
                     <div className="logInButtons">
-                        <button className="logInButton" type="submit">Login</button>
-                        <button className="logInButton" onClick={handleClick} >New User?</button>
+                        {/* <button className="logInButton" type="submit">Login</button>
+                        <button className="logInButton" onClick={handleClick} >New User?</button> */}
+                        <button type="submit" class="box-1">
+                            <button type="submit" class="btn btn-one">
+                                <span>Login</span>
+                            </button>
+                        </button>
+                        <button type="submit" class="box-1" onClick={handleClick}>
+                            <button type="submit" class="btn btn-one">
+                                <span>New User?</span>
+                            </button>
+                        </button>
                     </div>
                 </div>
             </form>
