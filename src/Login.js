@@ -33,13 +33,17 @@ function Login({ getCurrentUser, getAllUsers }) {
 
     return (
         <div className="login">
-            {/* <form onSubmit={handleSubmit} className="login-form">
-                <div className="loginInput">
-                    <input className="loginInputs" type="text" placeholder="User Name" value={username} onChange={(e) => handleUserChange(e)}></input>
-                    <input className="loginInputs" type="password" placeholder="Password" value={password} onChange={(e) => handlePasswordChange(e)}></input>
+            <div class="loginContainer" >
+                <form onSubmit={handleSubmit}>
+                    <div class="input" >
+                        <input placeholder="Enter Username" type="text" value={username} onChange={(e) => handleUserChange(e)}></input>
+                        <label>Username</label>
+                    </div>
+                    <div class="input">
+                        <input placeholder="Enter Password" type="password" value={password} onChange={(e) => handlePasswordChange(e)}></input>
+                        <label>Password</label>
+                    </div>
                     <div className="logInButtons">
-                        {/* <button className="logInButton" type="submit">Login</button>
-                        <button className="logInButton" onClick={handleClick} >New User?</button> */}
                         <button type="submit" class="box-1">
                             <button type="submit" class="btn btn-one">
                                 <span>Login</span>
@@ -51,25 +55,9 @@ function Login({ getCurrentUser, getAllUsers }) {
                             </button>
                         </button>
                     </div>
-                </div>
-            </form> */}
-
-            
-            <div class="loginContainer">
-                <form onSubmit={handleSubmit}>
-                    <div class="input" >
-                        <input placeholder="Enter Username" type="text" value={username} onChange={(e) => handleUserChange(e)}></input>
-                        <label>Username</label>
-                    </div>
-                    <div class="input">
-                        <input placeholder="Enter Password" type="password" value={password} onChange={(e) => handlePasswordChange(e)}></input>
-                        <label>Password</label>
-                    </div>
-                    <button type="submit" class="loginButton">Login</button>
-                    <button type="button" class="loginButton"onClick={handleClick}>New User?</button>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
 
     )
 }
