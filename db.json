@@ -104,8 +104,8 @@
         }
       ],
       "following": [
-        3,
-        1
+        1,
+        3
       ],
       "followers": [
         3,
@@ -121,7 +121,9 @@
       "posts": [
         {
           "id": 1,
-          "likes": [],
+          "likes": [
+            "chris-wong"
+          ],
           "image": "https://picsum.photos/200?random=5",
           "caption": "Hey guys",
           "comments": []
@@ -141,8 +143,8 @@
       ],
       "followers": [
         1,
-        2,
-        4
+        4,
+        2
       ],
       "username": "jack-schliewe",
       "password": ""
