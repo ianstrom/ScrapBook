@@ -8,7 +8,7 @@ function Search({ users, onClickUser }) {
 
     return (
         <div className="searchContainer">
-            <form >
+            <form onSubmit={(e) => e.preventDefault()}>
                 <div className="input">
                     <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Enter Username"></input>
                 </div>
