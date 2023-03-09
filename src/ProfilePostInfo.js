@@ -44,11 +44,11 @@ function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelet
     })
     return (
         <div className="PostContainer" id={post.id} >
-            <img className="previousButton" onClick={decreaseIndex} src={previousButton}/>
+            <img className="previousButton" onClick={decreaseIndex} src={previousButton} />
             <div className="mainFeedPostImageContainer">
                 <img src={image} alt="post" className="mainFeedPostImage" />
             </div>
-            <img className="nextButton" onClick={increaseIndex} src={nextButton}/>
+            <img className="nextButton" onClick={increaseIndex} src={nextButton} />
             <div className="likeAndCommentButton">
                 {(alreadyLiked ? <img className="islikedimg" src={likeActive} onClick={handleLike} /> : <img className="islikedimg" src={like} onClick={handleLike} />)}
                 <img className="commentButton" src={comment} onClick={handleClick} />
@@ -58,7 +58,9 @@ function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelet
                 <div className="captionContainer"><span className="captionUserName">{username}</span> <div className="captionText"> {caption}</div></div>
                 <div className="commentsContainer">{commentsToDisplay}</div>
                 <form className={className} onSubmit={handleSubmit}>
-                    <input placeholder={`Add a comment for ${user.username}`} value={commentInput} onChange={(e) => setCommentInput(e.target.value)}></input>
+                    <div class="input">
+                        <input placeholder={`Add a comment for ${user.username}`} value={commentInput} onChange={(e) => setCommentInput(e.target.value)}></input>
+                    </div>
                 </form>
             </div>
         </div>

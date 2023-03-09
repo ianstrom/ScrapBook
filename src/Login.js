@@ -47,12 +47,12 @@ function Login({ getCurrentUser, getAllUsers }) {
             
             <div class="loginContainer">
                 <form onSubmit={handleSubmit}>
-                    <div class="loginInput" >
-                        <input type="text" value={username} onChange={(e) => handleUserChange(e)}></input>
-                        <label>User Name</label>
+                    <div class="input" >
+                        <input placeholder="Enter Username" type="text" value={username} onChange={(e) => handleUserChange(e)}></input>
+                        <label>Username</label>
                     </div>
-                    <div class="loginInput">
-                        <input type="password" value={password} onChange={(e) => handlePasswordChange(e)}></input>
+                    <div class="input">
+                        <input placeholder="Enter Password" type="password" value={password} onChange={(e) => handlePasswordChange(e)}></input>
                         <label>Password</label>
                     </div>
                     <button type="submit" class="loginButton">Login</button>
