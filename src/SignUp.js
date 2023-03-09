@@ -32,7 +32,7 @@ function SignUp() {
 
     return (
         <div className="signUpContainer">
-            <form className="signUpForm" onSubmit={handleSubmit}>
+            {/* <form className="signUpForm" onSubmit={handleSubmit}>
                 <div className="signUpInput">
                     <input className="signUpInputs" name="name" placeholder="Enter Name"></input>
                     <input className="signUpInputs" name="username" placeholder="Enter Username"></input>
@@ -51,7 +51,30 @@ function SignUp() {
                         </button>
                     </div>
                 </div>
-            </form>
+            </form> */}
+
+            <div class="loginContainer">
+                <form onSubmit={handleSubmit}>
+                    <div class="input" >
+                        <input name="name" placeholder="Enter Name"></input>
+                        <label>Name</label>
+                    </div>
+                    <div class="input" >
+                        <input name="username" placeholder="Enter Username"></input>
+                        <label>Username</label>
+                    </div>
+                    <div class="input" >
+                        <input name="password" placeholder="Enter Password"></input>
+                        <label>Password</label>
+                    </div>
+                    <div class="input" >
+                        <input name="profileimg" placeholder="Profile Image"></input>
+                        <label>Password</label>
+                    </div>
+                    <button className="loginButton" type="submit">Sign Up</button>
+                        <button className="loginButton" onClick={handleClick}>Have a profile?</button>
+                </form>
+            </div>
         </div>
     )
 }

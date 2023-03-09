@@ -21,30 +21,30 @@ code {
   justify-content: center;
 }
 
-.loginInput {
+/* .loginInput {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 50%;
   height: auto;
   width: 30vw;
-}
+} */
 
-.loginInputs {
+/* .loginInputs {
   text-align: center;
   border-radius: 5px;
   height: 1.75vh;
   color: black
-}
+} */
 
-.login-form {
+/* .login-form {
   position: relative;
   height: 100vh;
   align-items: center;
   vertical-align: middle;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .profileContainer {
   margin-top: 1.25%;
@@ -148,11 +148,11 @@ code {
   margin-left: 70%;
 }
 
-.logInButton {
+/* .logInButton {
   border-radius: 5px;
   height: auto;
   width: 50%;
-}
+} */
 
 .postsContainer {
   grid-column: 2/3;
@@ -527,4 +527,150 @@ button[class*=box] {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loginContainer{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.89);
+	border-radius:3px;
+	padding:70px 100px;
+}
+.input{
+	position:relative;
+	margin-bottom:25px;
+}
+.input label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+	transition: all 0.5s ease-in-out;
+}
+.input input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+.loginButton{
+	color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+    color: #fff;
+	padding:10px 20px;
+	text-transform:uppercase;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+}
+.input input:focus ~ label,
+.input input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
 }

@@ -65,7 +65,9 @@ function Post({ post, user, onLike, onComment, myUser, onCommentDelete, onClickU
                 <div className="captionContainer"><span className="captionUserName">{username}</span> <div className="captionText"> {caption}</div></div>
                 <div className="commentsContainer">{commentsToDisplay}</div>
                 <form className={className} onSubmit={handleSubmit}>
-                    <input placeholder={`Add a comment for ${user.username}`} value={commentInput} onChange={(e) => setCommentInput(e.target.value)}></input>
+                    <div class="input">
+                        <input placeholder={`Add a comment for ${user.username}`} value={commentInput} onChange={(e) => setCommentInput(e.target.value)}></input>
+                    </div>
                 </form>
             </div>
         </div>
