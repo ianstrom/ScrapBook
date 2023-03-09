@@ -10,6 +10,7 @@ import NavBar from './NavBar';
 import Search from './Search';
 import ClickedProfile from './ClickedProfile';
 import SignUp from './SignUp';
+import logo from './icons/logo.png'
 
 
 
@@ -165,6 +166,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className={myUser ? 'signedInLogoContainer' : 'signedOutLogoContainer'}>
+      <img src={logo} className="logo"/>
+      </div>
       {(myUser ? <NavBar myUser={myUser} signOut={signOut} /> : null)}
       <Routes>
         <Route exact path="/signup" element={<SignUp />} />

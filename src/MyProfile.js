@@ -18,7 +18,7 @@ function MyProfile({ user, onLike, onComment, myUser, onCommentDelete }) {
     })
 
     const profilePostInfo = posts.map(post => {
-        return <ProfilePostContainer key={post.id} post={post} user={user} elementRef={elementRef} onLike={onLike} onComment={onComment} myUser={myUser} increaseIndex={increaseIndex} decreaseIndex={decreaseIndex} goBackToProfile={goBackToProfile} onCommentDelete={onCommentDelete}/>
+        return <ProfilePostContainer key={post.id} post={post} user={user} elementRef={elementRef} onLike={onLike} onComment={onComment} myUser={myUser} increaseIndex={increaseIndex} decreaseIndex={decreaseIndex} goBackToProfile={goBackToProfile} onCommentDelete={onCommentDelete} />/* </div> */
     })
 
     function increaseIndex() {
@@ -34,16 +34,14 @@ function MyProfile({ user, onLike, onComment, myUser, onCommentDelete }) {
     }
 
     return (
-        <div className="profileContainer">
+        <div className={isClicked ? "postsContainer" : "profilePostsContainer"}>
             <div className="profileInfoContainer">
                 <img src={profileimg} id="profileImage" alt="profileimage" />
                 <div className="profileInfo">{username}</div>
                 <div className="profileInfo">Followers: {followers.length}</div>
                 <div className="profileInfo">Following: {following.length}</div>
             </div>
-            <div>
-                {(isClicked ? profilePostInfo[postIndex] : <div className="profilePosts">{profilePosts}</div>)}
-            </div>
+            {(isClicked ? profilePostInfo[postIndex] : <div className="profilePosts">{profilePosts}</div>)}
         </div>
     )
 }

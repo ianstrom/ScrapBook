@@ -3,12 +3,14 @@ import Comment from "./Comment";
 import like from "./icons/like.png"
 import likeActive from "./icons/likeActive.png"
 import comment from "./icons/comment.png"
+import previousButton from "./icons/previous.png"
+import nextButton from "./icons/next.png"
 
-function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelete}){
+function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelete, increaseIndex, decreaseIndex }) {
     const [isClicked, setIsClicked] = useState(false)
     const [commentInput, setCommentInput] = useState("")
     const [alreadyLiked, setAlreadyLiked] = useState((post.likes.includes(myUser.username) ? true : false))
-    const { likes, image, comments } = post
+    const { likes, image, comments, caption } = post
     const { username } = user
 
     const className = (isClicked ? "commentform" : "straightupnothin")
@@ -25,6 +27,7 @@ function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelet
         }
 
         onComment(user, post, comment)
+        setCommentInput("")
     }
 
     function handleLike() {
@@ -37,21 +40,27 @@ function ProfilePostInfo({ post, user, onLike, onComment, myUser, onCommentDelet
     }
 
     const commentsToDisplay = comments.map((comment) => {
-        return <Comment key={comment.text} comment={comment} myUser={myUser} onCommentDelete={onCommentDelete} user={user} post={post}/>
+        return <Comment key={comment.text} comment={comment} myUser={myUser} onCommentDelete={onCommentDelete} user={user} post={post} />
     })
-    return(
+    return (
         <div className="PostContainer" id={post.id} >
-            <div>{username}</div>
-            <img src={image} alt="post" />
-            <div>
-                {(alreadyLiked ? <img className="islikedimg" src={likeActive} onClick={handleLike}/> : <img className="islikedimg" src={like} onClick={handleLike}/> )}
-                <img className="commentButton" src={comment} onClick={handleClick}/>
+            <img className="previousButton" onClick={decreaseIndex} src={previousButton}/>
+            <div className="mainFeedPostImageContainer">
+                <img src={image} alt="post" className="mainFeedPostImage" />
             </div>
-            <div>{likes}</div>
-            <div>{commentsToDisplay}</div>
-            <form className={className} onSubmit={handleSubmit}>
-                <input placeholder={`Add a comment for ${user.username}`} value={commentInput} onChange={(e) => setCommentInput(e.target.value)}></input>
-            </form>
+            <img className="nextButton" onClick={increaseIndex} src={nextButton}/>
+            <div className="likeAndCommentButton">
+                {(alreadyLiked ? <img className="islikedimg" src={likeActive} onClick={handleLike} /> : <img className="islikedimg" src={like} onClick={handleLike} />)}
+                <img className="commentButton" src={comment} onClick={handleClick} />
+            </div>
+            <div className="likesCommentsCaptionAndCommentForm">
+                <div>{likes.length} {likes.length === 1 ? "Like" : "Likes"}</div>
+                <div className="captionContainer"><span className="captionUserName">{username}</span> <div className="captionText"> {caption}</div></div>
+                <div className="commentsContainer">{commentsToDisplay}</div>
+                <form className={className} onSubmit={handleSubmit}>
+                    <input placeholder={`Add a comment for ${user.username}`} value={commentInput} onChange={(e) => setCommentInput(e.target.value)}></input>
+                </form>
+            </div>
         </div>
     )
 }

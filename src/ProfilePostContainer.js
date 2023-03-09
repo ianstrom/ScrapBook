@@ -17,11 +17,11 @@ function ProfilePostContainer({ post, user, onLike, onComment, myUser, decreaseI
     )
 
     return (
-        <div >
-            <button onClick={decreaseIndex}>Previous</button>
-            <ProfilePostInfo post={post} user={user} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete}/>
-            <button onClick={increaseIndex}>Next</button>
-        </div>
+        <>
+            {/* <button onClick={decreaseIndex}>Previous</button> */}
+            <ProfilePostInfo post={post} user={user} onLike={onLike} onComment={onComment} myUser={myUser} onCommentDelete={onCommentDelete} decreaseIndex={decreaseIndex} increaseIndex={increaseIndex}/>
+            {/* <button onClick={increaseIndex}>Next</button> */}
+        </>
     )
 }
 

@@ -22,7 +22,7 @@ function ClickedProfile({clickedUser, isFollowing, onFollow, onLike, onComment, 
     }
 
     const profilePostInfo = posts.map(post => {
-        return <ProfilePostContainer key={post.id} post={post} user={clickedUser} elementRef={elementRef} onLike={onLike} onComment={onComment} myUser={myUser} increaseIndex={increaseIndex} decreaseIndex={decreaseIndex} goBackToProfile={goBackToProfile} onCommentDelete={onCommentDelete}/>
+        return <ProfilePostContainer key={post.id} post={post} user={clickedUser} elementRef={elementRef} onLike={onLike} onComment={onComment} myUser={myUser} increaseIndex={increaseIndex} decreaseIndex={decreaseIndex} goBackToProfile={goBackToProfile} onCommentDelete={onCommentDelete} />
     })
 
     function increaseIndex() {
@@ -38,7 +38,7 @@ function ClickedProfile({clickedUser, isFollowing, onFollow, onLike, onComment, 
     }
 
     return (
-        <div className="profileContainer">
+        <div className={isClicked ? "postsContainer" : "profilePostsContainer"}>
             <div className="profileInfoContainer">
                 <img src={profileimg} id="profileImage" alt="profileimage" />
                 <div className="profileInfo">{username}</div>
@@ -46,9 +46,7 @@ function ClickedProfile({clickedUser, isFollowing, onFollow, onLike, onComment, 
                 <div className="profileInfo">Following: {following.length}</div>
             </div>
             <button onClick={onFollowClick}>{isFollowing ? "Unfollow" : "Follow"}</button>
-            <div>
                 {(isClicked ? profilePostInfo[postIndex] : <div className="profilePosts">{profilePosts}</div>)}
-            </div>
         </div>
     )
 }

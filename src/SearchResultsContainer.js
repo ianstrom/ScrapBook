@@ -7,7 +7,7 @@ function SearchResultsContainer({usersToDisplay, onClickUser}) {
     })
 
     return (
-        <div>
+        <div className="searchResultsContainer">
             {searchRender}
         </div>
     )

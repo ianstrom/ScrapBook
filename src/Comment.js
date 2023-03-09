@@ -1,4 +1,5 @@
 import React from "react";
+import deleteButton from "./icons/delete.png"
 
 function Comment({comment, myUser, onCommentDelete, user, post}) {
     const {username, text, commenterId, posterId} = comment
@@ -6,13 +7,14 @@ function Comment({comment, myUser, onCommentDelete, user, post}) {
 
     function handleDelete() {
         onCommentDelete(user, post, comment)
+        console.log("im deleting")
     }
 
     return (
         <div className="commentsDisplayContainer">
             <div className="captionUserName">{username}</div>
             <div className="commentText">{text}</div>
-            {displayDelete ? <button className="commentDeleteButton" onClick={handleDelete}>Delete</button> : null}
+            {displayDelete ? <img className="commentDeleteButton" onClick={handleDelete} src={deleteButton}/> : null}
         </div>
     )
 }

@@ -27,6 +27,7 @@ function Post({ post, user, onLike, onComment, myUser, onCommentDelete }) {
         }
 
         onComment(user, post, comment)
+        setCommentInput("")
     }
 
     function handleLike() {

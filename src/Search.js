@@ -7,7 +7,7 @@ function Search({ users , onClickUser }) {
     const usersToDisplay = users.filter((user) => user.username.toLowerCase().includes(search.toLowerCase()))
 
     return (
-        <div>
+        <div className="searchContainer">
             <form >
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Enter Username"></input>
             </form>

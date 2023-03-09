@@ -30,8 +30,8 @@ function CreatePost({user, getCurrentUser}) {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="createPostContainer">
+            <form className="createPostForm" onSubmit={handleSubmit}>
                 <input placeholder="image" value={image} onChange={(e) => setImage(e.target.value)}></input>
                 <input placeholder="caption" value={caption} onChange={(e) => setCaption(e.target.value)}></input>
                 <button type="submit">Post</button>

@@ -3,7 +3,7 @@
   background-color: #282c34;
   display: grid;
   grid-template-columns: 6vw 94vw;
-  grid-template-rows: 6vh 94vh;
+  grid-template-rows: auto 94vh;
 }
 
 .App-logo {

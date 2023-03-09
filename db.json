@@ -10,7 +10,15 @@
           "likes": [],
           "image": "https://picsum.photos/200?random=1",
           "caption": "",
-          "comments": []
+          "comments": [
+            {
+              "id": 0.21745834127800956,
+              "posterId": 1,
+              "commenterId": 1,
+              "username": "ian_strom",
+              "text": "a"
+            }
+          ]
         },
         {
           "id": 2,
@@ -25,8 +33,8 @@
         2
       ],
       "followers": [
-        2,
-        3
+        3,
+        2
       ],
       "username": "ian_strom",
       "password": "test123"
@@ -38,7 +46,9 @@
       "posts": [
         {
           "id": 1,
-          "likes": [],
+          "likes": [
+            "ian_strom"
+          ],
           "image": "https://picsum.photos/200?random=3",
           "caption": "",
           "comments": []
@@ -94,8 +104,8 @@
         }
       ],
       "following": [
-        1,
-        3
+        3,
+        1
       ],
       "followers": [
         3,
