@@ -28,7 +28,6 @@ function App() {
   }
 
   function getCurrentUser(user1) {
-    setMyUser(user1)
     setFollowing([])
 
     fetch(`http://localhost:3000/users/${user1.id}`)
@@ -40,6 +39,7 @@ function App() {
             setFollowing((following) => [...following, user])
           })
       }))
+      .then(data => setMyUser(user1))
   }
 
   function onClickUser(userToDisplay) {

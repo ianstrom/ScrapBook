@@ -27,6 +27,8 @@ function CreatePost({ user, getCurrentUser }) {
         })
             .then(data => data.json())
             .then(user => getCurrentUser(user))
+
+        e.target.reset()
     }
 
     return (

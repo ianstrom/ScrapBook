@@ -10,15 +10,7 @@
           "likes": [],
           "image": "https://picsum.photos/200?random=1",
           "caption": "",
-          "comments": [
-            {
-              "id": 0.21745834127800956,
-              "posterId": 1,
-              "commenterId": 1,
-              "username": "ian_strom",
-              "text": "a"
-            }
-          ]
+          "comments": []
         },
         {
           "id": 2,
@@ -34,7 +26,8 @@
       ],
       "followers": [
         3,
-        2
+        2,
+        17
       ],
       "username": "ian_strom",
       "password": "test123"
@@ -72,7 +65,15 @@
           "likes": [],
           "image": "https://picsum.photos/200?random=17",
           "caption": "",
-          "comments": []
+          "comments": [
+            {
+              "id": 0.658070075918697,
+              "posterId": 2,
+              "commenterId": 17,
+              "username": "",
+              "text": "k jk"
+            }
+          ]
         },
         {
           "id": 5,
@@ -109,6 +110,7 @@
       ],
       "followers": [
         3,
+        17,
         1
       ],
       "username": "chris-wong",
@@ -151,7 +153,7 @@
     },
     {
       "name": "chris chan",
-      "profileimg": "https://scpr.brightspotcdn.com/dims4/default/4f94506/2147483647/strip/true/crop/730x487+0+0/resize/1760x1174!/format/webp/quality/90/?url=http%3A%2F%2Fscpr-brightspot.s3.amazonaws.com%2Flegacy%2Fi%2F17db5f960cf8a4b4157dd3105b632999%2F5e6973bcb555c5000abe37b3-eight.jpg",
+      "profileimg": "https://picsum.photos/200?random=25",
       "posts": [],
       "following": [
         3
@@ -159,9 +161,142 @@
       "followers": [
         3
       ],
-      "username": "bum",
+      "username": "chris-chan",
       "password": "",
       "id": 4
+    },
+    {
+      "name": "Anson Guo",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "anson-guo",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "Bill Russel",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "bill-russell",
+      "password": "",
+      "id": 6
+    },
+    {
+      "name": "Finn Chen",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "finn-chen",
+      "password": "",
+      "id": 7
+    },
+    {
+      "name": "Bobby Gallegos",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "bobby-gallegos",
+      "password": "",
+      "id": 8
+    },
+    {
+      "name": "Brett Polacek",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "brett-polacek",
+      "password": "",
+      "id": 9
+    },
+    {
+      "name": "Eshwar Tangirala",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "react-master",
+      "password": "",
+      "id": 10
+    },
+    {
+      "name": "Jacob Park",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "jacob-park",
+      "password": "",
+      "id": 11
+    },
+    {
+      "name": "Kyushik",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "kyushik-unknown",
+      "password": "",
+      "id": 12
+    },
+    {
+      "name": "Minyoung Shin",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "min-shin",
+      "password": "",
+      "id": 13
+    },
+    {
+      "name": "Michelle Choi",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "michelle-choi",
+      "password": "",
+      "id": 14
+    },
+    {
+      "name": "Sally Khazaal",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "sally-khazaal",
+      "password": "",
+      "id": 15
+    },
+    {
+      "name": "Nicholas Brereton",
+      "profileimg": "",
+      "posts": [],
+      "following": [],
+      "followers": [],
+      "username": "nick-brereton",
+      "password": "",
+      "id": 16
+    },
+    {
+      "name": "",
+      "profileimg": "",
+      "posts": [],
+      "following": [
+        2,
+        1
+      ],
+      "followers": [],
+      "username": "",
+      "password": "",
+      "id": 17
     }
   ]
 }

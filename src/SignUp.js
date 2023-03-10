@@ -24,6 +24,7 @@ function SignUp() {
         })
             .then(r => r.json())
             .then(data => console.log(data))
+            e.target.reset()
     }
 
     const handleClick = () => {
@@ -48,7 +49,7 @@ function SignUp() {
                     </div>
                     <div className="input" >
                         <input name="profileimg" placeholder="Profile Image"></input>
-                        <label>Password</label>
+                        <label>Image</label>
                     </div>
                     <div className="signUpButtons">
                         <button type="submit" className="box-1">
